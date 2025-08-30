@@ -15,6 +15,7 @@ The goal is to build a solid foundation in Rust while maintaining clear, educati
 Navigate to the concept folder and run:
 ```bash
 cargo run
+```
 
 ## 📚 References
 - [The Rust Programming Language](https://doc.rust-lang.org/book/)  
