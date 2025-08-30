@@ -1,0 +1,14 @@
+# Ignore build output
+/target
+
+# Ignore Cargo.lock for libraries (workspaces usually don't need it)
+Cargo.lock
+
+# Ignore IDE stuff
+.vscode/
+.idea/
+*.iml
+
+# OS junk
+.DS_Store
+Thumbs.db
