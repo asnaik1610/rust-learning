@@ -20,4 +20,5 @@ cargo run
 ## 📚 References
 - [The Rust Programming Language](https://doc.rust-lang.org/book/)  
 - [Learn Rust in a Month of Lunches](https://www.manning.com/books/learn-rust-in-a-month-of-lunches/)  
+- [Programming With Rust](https://www.oreilly.com/library/view/programming-with-rust/9780137889754/)
 - [Rust Tutorial for Beginners by Harkirat Singh - Youtube](https://www.youtube.com/watch?v=qP7LzZqGh30&t=4110s&ab_channel=HarkiratSingh)
