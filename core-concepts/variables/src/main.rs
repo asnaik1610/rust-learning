@@ -1,4 +1,8 @@
+use rust_decimal::prelude::*;
+use rust_decimal_macros::dec;
+use std::f64::consts;
 use std::mem;
+
 fn main() {
     /* entry point -> main()
     variables are immutable by default
@@ -44,4 +48,24 @@ fn main() {
 
     let size = mem::size_of::<isize>();
     println!("The size of isize on my OS is {} bits", size * 8);
+
+    // notations -> base 10 is the default base for integer values
+    println!("{}", 10); // decimal
+    println!("{:04b}", 0b10); // binary
+    println!("{}", 0o42); // octal
+    println!("{}", 0xA); // hexadecimal
+
+    // float types
+    // calculating the volume of sphere
+    let radius_sphere: f64 = 7.0;
+    let volume_sphere = (4.0 / 3.0) * consts::PI * radius_sphere.powi(3); // use powi for int exp on floats
+    println!("The volume of the sphere: {:.3}", volume_sphere);
+
+    // creating decimal
+    let mut number1 = Decimal::from_str("-1.23656").unwrap();
+    let mut _number2 = dec!(-1.23656); // alternative
+
+    // round up value to 2 decimal places
+    number1 = number1.round_dp(2);
+    println!("The rounded number: {}", number1);
 }
