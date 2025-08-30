@@ -1,3 +1,4 @@
+use std::mem;
 fn main() {
     /* entry point -> main()
     variables are immutable by default
@@ -40,4 +41,7 @@ fn main() {
 
     // println! is a macro that prints a string to the screen
     println!("{} {}", max_signed_int, max_unsgined_int);
+
+    let size = mem::size_of::<isize>();
+    println!("The size of isize on my OS is {} bits", size * 8);
 }

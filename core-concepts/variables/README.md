@@ -8,12 +8,12 @@
 - Variables are named memory storage, and they remove the need to reference data using memory addresses 
 - A type describes the **memory layout of a value**
 - Variable Binding is an important term in Rust
-- *let* statement -> creates binding between a variable name and a memory location
+- `let` statement -> creates binding between a variable name and a memory location
 - Rust supports **flexible binding**
 
 ---
 
-#### 📜The following are the rules and naming conventions for variable names:
+### 📜The following are the rules and naming conventions for variable names:
 1. They are case-sensitive.
 2. They consist of alphanumeric characters and underscore.
 3. They cannot start with a number.
@@ -25,8 +25,49 @@
 
 ---
 
-#### Primitive Data Types
+### Primitive Data Types
 - basic types & building blocks of Rust
-- are intrinsic
+- are intrinsic in the sense that:
+   - The compiler knows their size, layout, and behavior.
+   - Operations on them (like +, -, *) are compiled directly to machine instructions.
+   - They don’t require the standard library to exist.
+   - That’s why you can use them in **#![no_std]** environments (like embedded systems).
 - implemented by Rust compiler
 - functions & attributes of primitives are implemented in Rust libraries 
+#### Types of Primitives
+##### 1. Scalar
+    - signed integer
+    - unsigned integer
+    - float
+    - bool
+    - reference 
+##### 2. Non-Scalar
+    - array
+    - tuple
+    - slice
+    - String
+    - str  
+##### 3. Other 
+    - (): unit type
+    - fn: function pointer types
+    - raw pointer
+  
+----
+#### Integer Types
+- Except for `isize` and `usize`, integer types are fixed sized, where the suffix of the type name defines the bit size.
+- The following are the signed integer types:
+  - i8
+  - i16
+  - i32
+  - i64
+  - i128
+  - isize
+- The following are the unsigned integer types:
+  - u8
+  - u16
+  - u32
+  - u64
+  - u128
+  - usize
+- The size of the `isize` and `usize` types depends on the **operating environment**. **It is the size of a pointer**.
+- You can get the size of any type with the `size_of` method function.
