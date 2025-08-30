@@ -13,7 +13,7 @@
 
 ---
 
-## 📜The following are the rules and naming conventions for variable names:
+#### 📜The following are the rules and naming conventions for variable names:
 1. They are case-sensitive.
 2. They consist of alphanumeric characters and underscore.
 3. They cannot start with a number.
@@ -25,7 +25,7 @@
 
 ---
 
-# Primitive Data Types
+#### Primitive Data Types
 - basic types & building blocks of Rust
 - are intrinsic
 - implemented by Rust compiler

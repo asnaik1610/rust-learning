@@ -1,7 +1,13 @@
-# Rust Core Concepts 🚀
+# Learning Rust 🚀
 
-This repository contains Rust programming language core concepts explained with simple code examples and comments.  
-The goal is to build a solid foundation in Rust while maintaining clear, educational notes.
+This repository is my Rust learning space, where I practice core concepts using simple code examples with explanatory comments. The aim is to gradually build a strong foundation in Rust while keeping the notes clear, concise, and beginner-friendly.
+
+## 🦀 Why Rust?
+
+Rust is known for:
+- ⚡ **Performance** → as fast as C/C++, with zero-cost abstractions
+- 🔒 **Reliability** → memory safety and fearless concurrency guaranteed at compile time
+- 🛠️ **Productivity** → great tooling (Cargo, rustfmt, Clippy) and friendly compiler errors
 
 ## 📂 Structure
 - `variables/` → Basics of variables, mutability, shadowing
