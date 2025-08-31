@@ -69,6 +69,30 @@
   - u64
   - u128
   - usize
+- Type sizes in Rust are more discrete than in some other languages. This enables developers to craft applications that are more efficient and specific to their requirements. 
+  ##### Range of Values for Signed Integer Types
+
+| Type  | Size    | Range                                                                                                           |
+| ----- | ------- | --------------------------------------------------------------------------------------------------------------- |
+| i8    | 8-bit   | –128 to 127                                                                                                     |
+| i16   | 16-bit  | –32,768 to 32,767                                                                                               |
+| i32   | 32-bit  | –2,147,483,648 to 2,147,483,647                                                                                 |
+| i64   | 64-bit  | –9,223,372,036,854,775,808 to 9,223,372,036,854,775,807                                                         |
+| i128  | 128-bit | –170,141,183,460,469,231,731,687,303,715,884,105,728 to <br>170,141,183,460,469,231,731,687,303,715,884,105,727 |
+| isize | Pointer | Architecture dependent                                                                                          |
+
+##### Range of Values for Unsigned Integer Types
+
+| Type  | Size    | Range                                                    |
+| ----- | ------- | -------------------------------------------------------- |
+| u8    | 8-bit   | 0 to 255                                                 |
+| u16   | 16-bit  | 0 to 65,535                                              |
+| u32   | 32-bit  | 0 to 4,294,967,295                                       |
+| u64   | 64-bit  | 0 to 18,446,744,073,709,551,615                          |
+| u128  | 128-bit | 0 to 340,282,366,920,938,463,463,374,607,431,768,211,455 |
+| usize | Pointer | Architecture dependent                                   |
+
+
 - The size of the `isize` and `usize` types depends on the **operating environment**. **It is the size of a pointer**.
 - You can get the size of any type with the `size_of` method function.
 - Overflow
@@ -90,3 +114,6 @@
 - Neither of them are ideal for fixed-point numbers.
 - The Decimal type, found in the `rust_decimal` crate, is a great type for fixed-point floating point numbers.
 - You can create a Decimal number with `from_str` contructor or `dec!` macro.
+- Floating point constants are implemented as `f64` primitives in the `std::f64::consts` module.
+- Rust supports 32-bit and 64-bit versions of infinity and negative infinity. `INFINITY` and `NEG_INFINITY` are const values found in either the `std::f32` or `std::f64` module.
+- NaN represents a numerically undefined or unknown result → `f64::NAN`.

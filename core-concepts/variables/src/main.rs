@@ -1,3 +1,4 @@
+use core::{f32, f64};
 use rust_decimal::prelude::*;
 use rust_decimal_macros::dec;
 use std::f64::consts;
@@ -33,7 +34,7 @@ fn main() {
     let mut _no_of_apples = 4;
 
     // different ways to declare an immutable variable
-    let _varname1: u8 = 90;
+    let varname1: f64 = -90.0;
     let _varname2 = 13; // inferred
     let _varname3: i8;
     let _varname4;
@@ -44,7 +45,10 @@ fn main() {
     let max_unsgined_int = u32::MAX;
 
     // println! is a macro that prints a string to the screen
-    println!("{} {}", max_signed_int, max_unsgined_int);
+    println!(
+        "The max signed int is: {}\nThe max unsigned int is: {}",
+        max_signed_int, max_unsgined_int
+    );
 
     let size = mem::size_of::<isize>();
     println!("The size of isize on my OS is {} bits", size * 8);
@@ -68,4 +72,22 @@ fn main() {
     // round up value to 2 decimal places
     number1 = number1.round_dp(2);
     println!("The rounded number: {}", number1);
+
+    // infinity values -> these are constants
+    let no_of_atoms = f32::INFINITY;
+    let negative_infinty_32 = f32::NEG_INFINITY;
+    let no_of_particles = f64::INFINITY;
+    let negative_infinty_64 = f64::NEG_INFINITY;
+    println!(
+        "The 32 bit +ve and -ve infinity: {}, {}\nThe 64 bit +ve and -ve infinity: {}, {}",
+        no_of_atoms, negative_infinty_32, no_of_particles, negative_infinty_64
+    );
+
+    // square root of a -ve number
+    let varname5 = f64::sqrt(varname1);
+    if varname5 == f64::NAN {
+        println!("The result is Not A Number");
+    } else {
+        println!("The result is A Number");
+    }
 }
